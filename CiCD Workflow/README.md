@@ -56,9 +56,7 @@ Jobs are executed with dependencies and rules.
 ## Final Reflection!
 - Manages code, runs pipelines, stores outputs, reuses dependencies, and provides monitoring.
 
-Links: [LinkedIn] (https://www.linkedin.com/posts/activity-7372505930715815936-1G4d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAhaU8MBUqVMk958-jv2ctka1x_lYAHp9KU)
-
-Images: 
+- Subscribe to the YouTube channel: [https://www.youtube.com/@CodeWith_Chandra ]
 
 
 
