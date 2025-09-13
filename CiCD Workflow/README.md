@@ -13,10 +13,9 @@
 
 
 ## Source Code Management (SCM)
- • Version Control: GitLab repository for code hosting and versioning.
- • Branching Strategy: Feature, develop, and main branches.
- • Code Review: Merge requests with code review process.
-
+-  Version Control: GitLab repository for code hosting and versioning.
+-  Branching Strategy: Feature, develop, and main branches.
+-  Code Review: Merge requests with code review process.
 
 ## Pipeline Configuration
 Defined in .gitlab-ci.yml, the pipeline stages are:
@@ -28,24 +27,34 @@ Defined in .gitlab-ci.yml, the pipeline stages are:
 Jobs are executed with dependencies and rules.
 
 ## Runners
-
+-  Pipeline Job Execution Agents: Shared runners (GitLab-provided) or custom runners (self-hosted).
+-  Executor Options: Configurable executors like Docker, shell, Kubernetes, etc.
 
 ## Artifacts
-
+-  Job Outputs: Binaries, reports, and logs.
+-  Output Persistence: Outputs are persisted for later jobs or downloads.
+-  Output Management: Configurable retention and visibility
 
 ## Cache
-
+-  Purpose: Speeds up pipelines by reusing dependencies.
+-  Configuration: Defined per job in .gitlab-ci.yml.
+-  Scope: Separate from artefacts and not meant for sharing build results.
 
 ## Environment
-
+-  Deployment Targets: Defines development, staging, and production environments.
+-  Configuration Management: Includes secrets and variables.
+-  Release Workflow: Supports manual approvals and review apps.
 
 ## Triggers
+-  Pipeline Triggering Options: Push, merge request, schedule, or API call.
+-  Workflow Management: Downstream/child pipelines for complex workflows.
+-  Integration Capabilities: External webhooks for integrations.
 
 ## Monitoring
-
+-  Logging and Monitoring: GitLab CI/CD provides real-time job logs, pipeline dashboards for success/failure trends, and integration with monitoring tools like Prometheus and Grafana.
 
 ## Final Reflection!
-
+- Manages code, runs pipelines, stores outputs, reuses dependencies, and provides monitoring.
 
 Links: [LinkedIn] (https://www.linkedin.com/posts/activity-7372505930715815936-1G4d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAhaU8MBUqVMk958-jv2ctka1x_lYAHp9KU)
 
