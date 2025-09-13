@@ -1,7 +1,7 @@
 # GitLab CI/CD  Workflow
 
 ## Table of Contents
--  Source Code Management (SCM)
+-  [Source Code Management (SCM)] (Source Code Management (SCM))
 -  Pipeline Configuration
 -  Runners
 -  Artifacts
@@ -12,3 +12,4 @@
 -  Final Reflection!
 
 
+## Source Code Management (SCM)
