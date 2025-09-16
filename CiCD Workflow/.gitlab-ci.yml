@@ -1,71 +1,71 @@
 
 # -------------------------------
-# GitLab CI/CD Pipeline Definition
+# GitLab CI/CD Pipeline
 # File: .gitlab-ci.yml
 # -------------------------------
 
-# Define pipeline stages (executed in order)
+# pipeline stages(executed in order)
 stages:
-  - build        # Compile / package application
-  - test         # Run tests (unit, integration, linting, etc.)
-  - deploy       # Deploy to an environment
+  - build        
+  - test         
+  - deploy       
 
 # -------------------------------
-# Build Stage
+# Build Stage 
 # -------------------------------
-build:               # Job name
-  stage: build           # Stage this job belongs to
-  image: python:3.10     # Use Python Docker image for the build
-  script:                # Commands executed by runner
+build:               
+  stage: build           
+  image: python:3.10     
+  script:                
     - echo "Installing dependencies..."
     - pip install -r requirements.txt
     - echo "Building application..."
     - python setup.py build
-  artifacts:             # Files to save and pass to next stage
+  artifacts:               
     paths:
-      - build/           # Save the build output folder
-    expire_in: 1 week    # Artifacts will expire after 1 week
-  cache:                 # Cache dependencies for faster builds
+      - build/           
+    expire_in: 1 week    
+  cache:                 
     paths:
-      - .venv/           # Virtual environment directory
+      - .venv/           
 
 # -------------------------------
-# Test Stage
+# Test Stage 
 # -------------------------------
-test:                # Job name
-  stage: test            # Stage this job belongs to
+test:              
+  stage: test            
   image: python:3.10
-  dependencies:          # Depend on artifacts from previous job
+  dependencies:         
     - build
   script:
     - echo "Running tests..."
-    - pytest tests/      # Run tests inside the tests/ folder
+    - pytest tests/      
   artifacts:
-    when: always         # Always upload test reports (even if failed)
+    when: always         
     reports:
-      junit: report.xml  # Upload JUnit-style test report
+      junit: report.xml  
 
 # -------------------------------
-# Deploy Stage
+# Deploy Stage 
 # -------------------------------
-deploy:              # Job name
+deploy:             
   stage: deploy
-  image: alpine:latest   # Lightweight image for deployment scripts
-  environment:           # Define deployment environment
-    name: production     # Environment name (Dev, Staging, Prod, etc.)
-    url: https://example.com   # URL for environment dashboard
+  image: alpine:latest   
+  environment:           
+    name: production    
+    url: https://example.com   
   script:
     - echo "Deploying application..."
-    - ./deploy.sh        # Run deployment script
+    - ./deploy.sh        
   only:
-    - main               # Run deploy job only on 'main' branch
+    - main               
 
 # -------------------------------
-# Scheduled Example
+# Scheduled Job Example
 # -------------------------------
 nightly:
   stage: test
   script:
     - echo "Running nightly checks..."
   only:
-    - schedules          # Triggered by scheduled pipeline
+    - schedules          
