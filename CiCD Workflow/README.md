@@ -1,7 +1,7 @@
 # DevOps Tutorial
 Master DevOps with this beginner's guide! Learn key concepts, automation, and CI/CD with step-by-step tutorials on essential tools like Docker, Kubernetes, Jenkins, and Git. Start your journey toward a career as a DevOps Engineer and improve your software delivery process
 
-# GitLab CI/CD  Workflow
+## GitLab CI/CD  Workflow
    GitLab CI/CD automates the code building, testing, and deployment processes, thereby ensuring faster and more reliable software delivery. Here’s a step-by-step breakdown of the process:
 ## Table of Contents
 -  Source Code Management (SCM)
